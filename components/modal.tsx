@@ -1,8 +1,6 @@
 import { Fragment } from "react";
 import { Transition, Dialog } from "@headlessui/react";
 
-import { faTimes } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import cn from "classnames";
 
 export function NeoModal({
@@ -107,7 +105,7 @@ export function ModalHeader({
             if (onClose) onClose();
           }}
         >
-          <FontAwesomeIcon icon={faTimes} />
+          X
         </button>
       </div>
     </div>
