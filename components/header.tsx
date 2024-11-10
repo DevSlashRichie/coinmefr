@@ -33,8 +33,7 @@ export function Header() {
             type="button"
             className="text-sm hover:text-red-300 transition-all"
             onClick={() => {
-              router.push("/");
-              session.logout();
+              router.push("/?logout=true");
             }}
           >
             Salir

@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Eye, EyeOff } from "lucide-react";
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import { toast } from "react-hot-toast";
 import { useSession } from "@/api/session";
 import { LoginCheck, UserSession } from "@/api/usecase";
@@ -22,12 +22,22 @@ export default function Component() {
 
   const router = useRouter();
 
+  // get queyrparamters
+
+  const query = useSearchParams();
+
   const session = useSession<UserSession>();
   const { client } = useClient();
 
   useEffect(() => {
-    if (session.isAuth) {
+    const islogout = query.has("logout");
+    if (session.isAuth && !islogout) {
       router.push("/dashboard");
+    }
+
+    if (islogout) {
+      session.logout();
+      router.push("/");
     }
   }, []);
 
