@@ -52,7 +52,7 @@ export function Graphs() {
   };
 
   return (
-    <div className="w-full max-w-[800px] self-center">
+    <div className="w-full max-w-[800px] self-center px-10 md:px-0">
       {/* Metric Selector */}
       <div className="flex gap-2 overflow-x-auto pb-2">
         {[
@@ -65,7 +65,7 @@ export function Graphs() {
             key={metric.id}
             onClick={() => setSelectedMetric(metric.id as MetricType)}
             className={`px-4 py-2 rounded-full whitespace-nowrap ${
-              selectedMetric === metric.id ? 'bg-[#A7E96B] text-black' : 'bg-gray-100 text-gray-600'
+              selectedMetric === metric.id ? 'bg-[#A7E96B] text-black' : 'bg-[#F4F5F2] text-gray-600'
             }`}
           >
             {metric.label}

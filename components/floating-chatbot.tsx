@@ -11,8 +11,8 @@ export function FloatingChatbot() {
       {isChatOpen && (
         <div className="mb-2 w-[500px] max-h-[60vh] rounded-xl overflow-auto border bg-white shadow-lg transition-all duration-300 ease-in-out">
           <ChatInterface
-            title="Cainie"
-            initialMessage="Hola! Soy Cainie, tu asistente personal en finanzas 🤑. ¿En qué puedo ayudarte hoy? 💰"
+            title="CoinBot"
+            initialMessage="Hola! Soy CoinBot, tu asistente personal en finanzas 🤑. ¿En qué puedo ayudarte hoy? 💰"
             systemPrompt="Eres un asistente virtual que ayudará a los usuarios a administrar sus finanzas, dar consejos sobre inversiones, fondos ahorro y economía en méxico. A continuación el usuario te proporcionará información sobre sus finanzas y tu deberás responder a sus preguntas." // Agregar aquí info sobre tasa de interés en coinme, así como información a detalle sobre préstamos, etc.
             additionalContext="Tengo 12000 pesos en mi cuenta de ahorro" // Agregar aquí información sobre el usuario desde la API
           />

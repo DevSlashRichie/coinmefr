@@ -30,14 +30,16 @@ export default function Component() {
           <div className="text-4xl font-bold mb-2">${balance.toLocaleString()}</div>
           <div className="inline-flex items-center gap-2 px-3 py-1 bg-[#F0F9E8] rounded-full">
             <span className="w-2 h-2 bg-[#A7E96B] rounded-full"></span>
-            <span className="text-sm">Disponible</span>
+            <span className="flex gap-1 text-sm">
+              Creciendo al 2.7% <ChartNoAxesCombined className="w-4 h-4" />
+            </span>
           </div>
         </div>
 
         {/* Action Buttons */}
         <div className="flex flex-col w-full items-center">
           <div className="grid grid-cols-2 gap-4 mb-8 md:grid-cols-4 max-w-[800px] font-semibold">
-            <button className="flex flex-col items-center bg-gray-100 hover:bg-[#A7E96B]/40 transition-colors rounded-3xl p-8 !aspect-square">
+            <button className="flex flex-col items-center bg-[#F4F5F2] hover:bg-[#A7E96B]/40 transition-colors rounded-3xl p-8 !aspect-square">
               <div className="relative w-full max-w-24 aspect-square mb-2">
                 <Image src="/images/dashboard/add.png" alt="Agregar" fill className="object-cover rounded-lg" />
               </div>
@@ -46,7 +48,7 @@ export default function Component() {
                 <span className="text-sm">Agregar</span>
               </div>
             </button>
-            <button className="flex flex-col items-center bg-gray-100 hover:bg-[#A7E96B]/40 transition-colors rounded-3xl p-8 !aspect-square">
+            <button className="flex flex-col items-center bg-[#F4F5F2] hover:bg-[#A7E96B]/40 transition-colors rounded-3xl p-8 !aspect-square">
               <div className="relative w-full max-w-24 aspect-square mb-2">
                 <Image src="/images/dashboard/send.png" alt="Enviar" fill className="object-cover rounded-lg" />
               </div>
@@ -55,7 +57,7 @@ export default function Component() {
                 <span className="text-sm">Enviar</span>
               </div>
             </button>
-            <button className="flex flex-col items-center bg-gray-100 hover:bg-[#A7E96B]/40 transition-colors rounded-3xl p-8 !aspect-square">
+            <button className="flex flex-col items-center bg-[#F4F5F2] hover:bg-[#A7E96B]/40 transition-colors rounded-3xl p-8 !aspect-square">
               <div className="relative w-full max-w-24 aspect-square mb-2">
                 <Image src="/images/dashboard/invest.png" alt="Invertir" fill className="object-cover rounded-lg" />
               </div>
@@ -64,7 +66,7 @@ export default function Component() {
                 <span className="text-sm">Invertir</span>
               </div>
             </button>
-            <button className="flex flex-col items-center bg-gray-100 hover:bg-[#A7E96B]/40 transition-colors rounded-3xl p-8 !aspect-square">
+            <button className="flex flex-col items-center bg-[#F4F5F2] hover:bg-[#A7E96B]/40 transition-colors rounded-3xl p-8 !aspect-square">
               <div className="relative w-full max-w-24 aspect-square mb-2">
                 <Image src="/images/dashboard/loan.png" alt="Préstamos" fill className="object-cover rounded-lg" />
               </div>
@@ -74,10 +76,36 @@ export default function Component() {
               </div>
             </button>
           </div>
+          <div className="flex flex-col gap-4 mb-8 w-full max-w-[800px] font-semibold px-10 md:px-0">
+            <button className="flex w-full items-center bg-[#F4F5F2] hover:bg-[#A7E96B]/40 transition-colors rounded-3xl p-4 gap-4">
+              <div className="relative w-24 h-24 aspect-square mb-2">
+                <Image src="/images/money.png" alt="Enviar" fill className="object-cover rounded-lg" />
+              </div>
+              <div className="flex items-center gap-2">
+                {/* <ArrowLeft className="w-6 h-6 rotate-[135deg]" /> */}
+                <span className="text-sm text-start">
+                  Gracias a tu buen historial crediticio, tienes disponible un préstamo de $10,000 MXN a una tasa de
+                  interés del 10%. ¡Aprovéchalo ahora!
+                </span>
+              </div>
+            </button>
+            <button className="flex w-full items-center bg-[#F4F5F2] hover:bg-[#A7E96B]/40 transition-colors rounded-3xl p-4 gap-4">
+              <div className="relative w-24 h-24 aspect-square mb-2">
+                <Image src="/images/robot.png" alt="Enviar" fill className="object-cover rounded-lg" />
+              </div>
+              <div className="flex items-center gap-2">
+                {/* <ArrowLeft className="w-6 h-6 rotate-[135deg]" /> */}
+                <span className="text-sm text-start">
+                  Recuerda que puedes invertir tu dinero a 28 días con una tasa de interés del 5% anual. ¡Haz crecer tu
+                  dinero ahora!
+                </span>
+              </div>
+            </button>
+          </div>
         </div>
 
         {/* Transactions */}
-        <div className="w-full max-w-[800px] self-center">
+        <div className="w-full max-w-[800px] self-center px-10 md:px-0">
           <div className="flex justify-between items-center mb-4">
             <h2 className="text-xl font-semibold">Transacciones</h2>
             <button className="font-semibold underline">Ver todo</button>

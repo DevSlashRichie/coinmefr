@@ -43,7 +43,7 @@ const Navbar: React.FC<NavbarProps> = ({ selected }) => {
         text={'Inicio'}
         selected={selectedButton === 'Inicio'}
         onClick={() => handleButtonClick('Inicio')}
-        href="inicio"
+        href="dashboard"
       >
         <House className="w-6 h-6" />
       </NavBarButton>

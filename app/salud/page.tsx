@@ -36,7 +36,7 @@ export default function Component() {
         {/* Action Buttons */}
         <div className="flex flex-col w-full items-center">
           <div className="grid grid-cols-2 gap-4 mb-8 md:grid-cols-4 max-w-[800px] font-semibold">
-            <button className="flex flex-col items-center bg-gray-100 hover:bg-[#A7E96B]/40 transition-colors rounded-3xl p-8 !aspect-square">
+            <button className="flex flex-col items-center bg-[#F4F5F2] hover:bg-[#A7E96B]/40 transition-colors rounded-3xl p-8 !aspect-square">
               <div className="relative w-full max-w-24 aspect-square mb-2">
                 <Image src="/images/dashboard/add.png" alt="Agregar" fill className="object-cover rounded-lg" />
               </div>
@@ -45,7 +45,7 @@ export default function Component() {
                 <span className="text-sm">Agregar</span>
               </div>
             </button>
-            <button className="flex flex-col items-center bg-gray-100 hover:bg-[#A7E96B]/40 transition-colors rounded-3xl p-8 !aspect-square">
+            <button className="flex flex-col items-center bg-[#F4F5F2] hover:bg-[#A7E96B]/40 transition-colors rounded-3xl p-8 !aspect-square">
               <div className="relative w-full max-w-24 aspect-square mb-2">
                 <Image src="/images/dashboard/send.png" alt="Enviar" fill className="object-cover rounded-lg" />
               </div>
@@ -54,7 +54,7 @@ export default function Component() {
                 <span className="text-sm">Enviar</span>
               </div>
             </button>
-            <button className="flex flex-col items-center bg-gray-100 hover:bg-[#A7E96B]/40 transition-colors rounded-3xl p-8 !aspect-square">
+            <button className="flex flex-col items-center bg-[#F4F5F2] hover:bg-[#A7E96B]/40 transition-colors rounded-3xl p-8 !aspect-square">
               <div className="relative w-full max-w-24 aspect-square mb-2">
                 <Image src="/images/dashboard/invest.png" alt="Invertir" fill className="object-cover rounded-lg" />
               </div>
@@ -63,7 +63,7 @@ export default function Component() {
                 <span className="text-sm">Invertir</span>
               </div>
             </button>
-            <button className="flex flex-col items-center bg-gray-100 hover:bg-[#A7E96B]/40 transition-colors rounded-3xl p-8 !aspect-square">
+            <button className="flex flex-col items-center bg-[#F4F5F2] hover:bg-[#A7E96B]/40 transition-colors rounded-3xl p-8 !aspect-square">
               <div className="relative w-full max-w-24 aspect-square mb-2">
                 <Image src="/images/dashboard/loan.png" alt="Préstamos" fill className="object-cover rounded-lg" />
               </div>
