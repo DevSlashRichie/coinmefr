@@ -192,12 +192,6 @@ const ChatInterface = ({
       //   { role: "assistant", content: responseContent },
       // ]);
     } catch (err) {
-      console.error("Full error object:", err);
-      console.error("Error details:", {
-        message: err.message,
-        status: err.status,
-        response: err.response,
-      });
       setError(
         "Sorry, there was an error processing your message. Please try again.",
       );
@@ -270,7 +264,9 @@ const ChatInterface = ({
             className="flex-1 p-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
           />
           <button
-            onClick={handleUserInput}
+            onClick={() => {
+              handleUserInput();
+            }}
             disabled={isLoading}
             className="flex items-center justify-center p-2 w-10 h-10 bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:opacity-50 disabled:cursor-not-allowed"
           >
